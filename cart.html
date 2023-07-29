@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshSuits - Cart</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="home.html">FreshSuits</a>
+                <div class="cart-container">
+                    <div class="cart">
+                        <a href="cart.html"><img src="shopping-cart.png" alt="Shopping Cart"></a>
+                        <span id="cart-span">0</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        <div class="cart-table">
+            <h2>Shopping Cart</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody class="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </tbody>
+            </table>
+            <p class="cart-total">Total: <span class="cart-total-price">£0.00</span></p>
+            <!-- Purchase button to proceed with the purchase -->
+            <button class="btn btn-success" onclick="purchase()">Purchase</button>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JavaScript file for handling cart functionality -->
+    <script src="ShoppingCart.js"></script>
+    <script>
+        // Load and display cart items on page load
+        onloadCartNumbers();
+        displayCart();
+    </script>
+</body>
+
+</html>
+
